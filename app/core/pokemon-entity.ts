@@ -622,19 +622,6 @@ export class PokemonEntity extends Schema implements IPokemonEntity {
       }
     }
 
-    if (this.status.stoneEdge) {
-      const tg = board.getValue(target.positionX, target.positionY)
-      if (tg) {
-        tg.handleDamage({
-          damage: Math.round(this.def * (1 + this.ap / 100)),
-          board,
-          attackType: AttackType.SPECIAL,
-          attacker: this,
-          shouldTargetGainMana: true
-        })
-      }
-    }
-
     if (this.passive === Passive.DURANT) {
       const bugAllies =
         board.cells.filter(
@@ -990,7 +977,7 @@ export class PokemonEntity extends Schema implements IPokemonEntity {
         id: this.simulation.id,
         skill: "SHELL_TRAP_trigger",
         positionX: target.positionX,
-        positionY: target.positionX,
+        positionY: target.positionY,
         orientation: target.orientation
       })
       cells.forEach((cell) => {
