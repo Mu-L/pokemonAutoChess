@@ -514,9 +514,9 @@ export class OnDragDropItemCommand extends Command<
     }
 
     if (item === Item.FIRE_SHARD) {
-      if (pokemon.types.has(Synergy.FIRE) && player.life > 2) {
-        pokemon.atk += 2
-        player.life = min(1)(player.life - 2)
+      if (pokemon.types.has(Synergy.FIRE) && player.life > 3) {
+        pokemon.atk += 3
+        player.life = min(1)(player.life - 3)
         removeInArray(player.items, item)
       }
       client.send(Transfer.DRAG_DROP_FAILED, message)
@@ -678,9 +678,13 @@ export class OnRefreshCommand extends Command<GameRoom, string> {
     const player = this.state.players.get(id)
     if (!player) return
     const rollCost = player.shopFreeRolls > 0 ? 0 : 1
-    if (player.money >= rollCost && player.alive) {
+    const rollCostType =
+      this.state.specialGameRule === SpecialGameRule.DESPERATE_MOVES
+        ? "life"
+        : "money"
+    if (player[rollCostType] >= rollCost && player.alive) {
       this.state.shop.assignShop(player, true, this.state)
-      player.money -= rollCost
+      player[rollCostType] -= rollCost
       player.rerollCount++
       if (player.shopFreeRolls > 0) player.shopFreeRolls--
     }
@@ -885,7 +889,7 @@ export class OnUpdatePhaseCommand extends Command<GameRoom> {
           case Effect.ANGER_POINT:
             player.titles.add(Title.CAMPER)
             break
-          case Effect.POWER_TRIP:
+          case Effect.MERCILESS:
             player.titles.add(Title.MYTH_TRAINER)
             break
           case Effect.CALM_MIND:

@@ -392,7 +392,11 @@
     "THUNDER_CAGE": "Thunder Cage",
     "HEADBUTT": "Headbutt",
     "STEEL_WING": "Steel Wing",
-    "YAWN": "Yawn"
+    "YAWN": "Yawn",
+    "FIERY_DANCE": "Fiery Dance",
+    "BIDE": "Bide",
+    "SHORE_UP": "Shore Up",
+    "POISON_STING": "Poison Sting"
   },
   "pkm": {
     "DEFAULT": "MissingNo.",
@@ -727,7 +731,8 @@
     "MEGA_BANETTE": "Mega Banette",
     "HONEDGE": "Honedge",
     "DOUBLADE": "Doublade",
-    "AEGISLASH": "Aegislash",
+    "AEGISLASH": "Aegislash (Shield)",
+    "AEGISLASH_BLADE": "Aegislash (Blade)",
     "CUBONE": "Cubone",
     "MAROWAK": "Marowak",
     "ALOLAN_MAROWAK": "Alolan Marowak",
@@ -1252,7 +1257,13 @@
     "IRON_HANDS": "Iron Hands",
     "ROOKIDEE": "Rookidee",
     "CORVISQUIRE": "Corvisquire",
-    "CORVIKNIGHT": "Corviknight"
+    "CORVIKNIGHT": "Corviknight",
+    "MURKROW": "Murkrow",
+    "HONCHKROW": "Honchkrow",
+    "SANDYGAST": "Sandygast",
+    "PALOSSAND": "Palossand",
+    "SKORUPI": "Skorupi",
+    "DRAPION": "Drapion"
   },
   "ability_description": {
     "SOFT_BOILED": "Cures all status effects and grants [20,40,80,SP] SHIELD to every allied Pokémon",
@@ -1412,10 +1423,10 @@
     "HEX": "Deals [20,40,80,SP] SPECIAL to the target. Double damage if target suffers from a negative status.",
     "GROWTH": "Increase max HP by [10,20,30,SP] and ATK by [3,4,5,SP]. Grows twice as fast if weather is SUN",
     "HEAL_ORDER": "Deals [25,45,65,SP] SPECIAL to adjacent enemies and heal [25,45,65,SP] to adjacent allies",
-    "SHELL_TRAP": "After the next PHYSICAL received, the trap explodes and deal [100,SP] SPECIAL to adjacent enemies",
+    "SHELL_TRAP": "The shield of the Pokemon explodes, dealing [50,SP] SPECIAL + current SHIELD around it. If it's not shielded, gains [75,SP] SHIELD instead.",
     "DIG": "Digs underground and reappears next to the farthest enemy, dealing [10,20,40,SP] SPECIAL to all enemies on the way",
     "FIRE_SPIN": "Area of effect attack that deals [20,40,80,SP] SPECIAL around the target and BURN all enemies hit for 3 seconds",
-    "SEARING_SHOT": "An inferno of scarlet flames torches everything around the user. Deals [40,SP] SPECIAL and BURN for 3 seconds all enemies within 2 tiles of Victini.",
+    "SEARING_SHOT": "An inferno of scarlet flames torches everything around the user. Deals [50,SP] SPECIAL and BURN for 3 seconds all enemies within 2 tiles of Victini.",
     "SPLASH": "Just flops and splashes around to no effect at all...",
     "PECK": "Deals [10,30,50,SP] SPECIAL to the target",
     "COUNTER": "Pokemon lashes out at adjacent enemies dealing [50,SP]% of its missing HP as SPECIAL",
@@ -1625,7 +1636,11 @@
     "THUNDER_CAGE": "Traps target and adjacent enemies in an electric prison that deals [60,SP] SPECIAL and inflicts LOCKED and PARALYSIS for 3 seconds.",
     "HEADBUTT": "Deals [20,40,80,SP] SPECIAL to the target and inflicts FLINCH for 5 seconds. Double damage if target has a SHIELD.",
     "STEEL_WING": "Dash into the enemy team's backline, dealing [10,20,40,SP] SPECIAL + 3x DEF as SPECIAL and stealing 1 DEF to all enemy Pokémon hit.",
-    "YAWN": "Gain [20,40,80,SP] SHIELD. Opponents targeting this unit are FATIGUE for 4 seconds and lose 30% AP."
+    "YAWN": "Gain [20,40,80,SP] SHIELD. Opponents targeting this unit are FATIGUE for 4 seconds and lose 30% AP.",
+    "FIERY_DANCE": "Cloaked in flames, the user dances and flaps its wings dealing [25,50,100,SP] SPECIAL to the target. Then raise the caster's AP by 30.",
+    "BIDE": "The user is unable to move for 3 secs. Bide will do SPECIAL damage equal to twice the damage received during the idling period around the user.",
+    "SHORE_UP": "Heals the caster for [20,25,SP] % HP. If the weather is a SANDSTORM, increases  to [30,35,SP] % HP.",
+    "POISON_STING": "Inflicts [2,3,4] stacks of POISON to target. Every stack over the max deals immediately [25,50,100,SP] SPECIAL."
   },
   "effect": {
     "INGRAIN": "Ingrain",
@@ -1675,6 +1690,7 @@
     "PURSUIT": "Pursuit",
     "BRUTAL_SWING": "Brutal Swing",
     "POWER_TRIP": "Power Trip",
+    "MERCILESS": "Merciless",
     "MEDITATE": "Meditate",
     "FOCUS_ENERGY": "Focus Energy",
     "CALM_MIND": "Calm Mind",
@@ -1756,7 +1772,7 @@
     "INGRAIN": "Restore 7 HP every 2 seconds. Get a berry tree.",
     "GROWTH": "Restore 15 HP every 2 seconds. Get another berry tree.",
     "SPORE": "Restore 30 HP every 2 seconds. Get a third berry tree.",
-    "BLAZE": "30% chance to BURN",
+    "BLAZE": "Attacks have 30% chance to inflict BURN for 2 seconds",
     "VICTORY_STAR": "+1 ATK after every hit",
     "DROUGHT": "+2 ATK after every hit",
     "DESOLATE_LAND": "+3 ATK after every hit. After every round, get a FIRE_SHARD (max 1)",
@@ -1789,9 +1805,10 @@
     "BULK_UP": "Heal 30 HP and gain 20% ATK_SPEED",
     "RAGE": "Heal 30 HP and gain 25% ATK_SPEED",
     "ANGER_POINT": "Heal 30 HP and gain 30% ATK_SPEED",
-    "PURSUIT": "30% chance to FLINCH. When knocking down its target, gain 3 ATK, 10 AP and 30 max HP",
-    "BRUTAL_SWING": "40% chance to FLINCH. When knocking down its target, gain 6 ATK, 20 AP and 60 max HP",
-    "POWER_TRIP": "50% chance to FLINCH. When knocking down its target, gain 10 ATK, 30 AP and 100 max HP",
+    "PURSUIT": "30% chance to FLINCH. When knocking down a target, gain 3 ATK, 10 AP and 20% of its max HP.",
+    "BRUTAL_SWING": "When knocking down a target, gain 6 ATK, 20 AP and 40% of its max HP",
+    "POWER_TRIP": "When knocking down a target, gain 10 ATK, 30 AP and 60% of its max HP",
+    "MERCILESS": "MONSTER can target allies with less than 15% of their max HP",
     "MEDITATE": "Heal for 15% HP of the damage",
     "FOCUS_ENERGY": "Heal for 30% HP of the damage",
     "CALM_MIND": "Heal for 60% HP of the damage",
@@ -1857,7 +1874,7 @@
     "HYDRATATION": "GRASS synergy is healing 5 additional HP per second under the RAIN",
     "POISON_GAS": "Inflicts POISONNED every second",
     "SHINING_RAY": "Increase AP and ATK by 20%",
-    "LIGHT_PULSE": "Also give +10 PP per second",
+    "LIGHT_PULSE": "Also give +8 PP per second",
     "ETERNAL_LIGHT": "Also increase DEF and SPE_DEF by 50% and give RUNE_PROTECT for 10 seconds",
     "MAX_ILLUMINATION": "Also give 100 SHIELD and RESURECTION",
     "QUICK_FEET": "+30% ATK and move speed",
@@ -2104,7 +2121,7 @@
     "FLOAT_STONE": "Counts for 3 towards WINDY. Under WINDY, gain 5% additional dodge chance.",
     "MIST_STONE": "Counts for 3 towards MISTY. Under MISTY, your team gains 2 SPE_DEF.",
     "BLOOD_STONE": "Counts for 3 towards BLOODMOON. Under BLOODMOON, your team gets 30% of incoming healing as SHIELD when WOUND, and heal for 20% of damage dealt if target is WOUND.",
-    "FIRE_SHARD": "Sacrifice 2 player HP to give permanently +2 ATK to a FIRE Pokémon. Immediately consumed when given.",
+    "FIRE_SHARD": "Sacrifice 3 player HP to give permanently +3 ATK to a FIRE Pokémon. Immediately consumed when given.",
     "TEAL_MASK": "This carved wooden mask is adorned with crystals, grants 50 SHIELD and allows Ogerpon to wield the FLORA type during battle.",
     "WELLSPRING_MASK": "This carved wooden mask is adorned with crystals, grants 50 SHIELD and allows Ogerpon to wield the AQUATIC type during battle.",
     "HEARTHFLAME_MASK": "This carved wooden mask is adorned with crystals, grants 50 SHIELD and allows Ogerpon to wield the FIRE type during battle.",
@@ -2229,7 +2246,9 @@
     "OGERPON_TEAL": "Ogerpon can wear TEAL_MASK, HEARTHFLAME_MASK, WELLSPRING_MASK and CORNERSTONE_MASK to change its appearance \n Upon casting, restores [20,SP] HP to adjacent allies",
     "OGERPON_WELLSPRING": "Ogerpon can wear TEAL_MASK, HEARTHFLAME_MASK, WELLSPRING_MASK and CORNERSTONE_MASK to change its appearance \n Upon casting, gives 10 PP to adjacent allies",
     "OGERPON_HEARTHFLAME": "Ogerpon can wear TEAL_MASK, HEARTHFLAME_MASK, WELLSPRING_MASK and CORNERSTONE_MASK to change its appearance \n Upon casting, BURN adjacent enemies for 2 seconds",
-    "OGERPON_CORNERSTONE": "Ogerpon can wear TEAL_MASK, HEARTHFLAME_MASK, WELLSPRING_MASK and CORNERSTONE_MASK to change its appearance \n Upon casting, FLINCH adajcent enemies for 5 seconds"
+    "OGERPON_CORNERSTONE": "Ogerpon can wear TEAL_MASK, HEARTHFLAME_MASK, WELLSPRING_MASK and CORNERSTONE_MASK to change its appearance \n Upon casting, FLINCH adajcent enemies for 5 seconds",
+    "VICTINI": "Increases the accuracy of the team. Allies can no longer miss their attacks.",
+    "AEGISLASH": "Alternates between Shield Forme and Blade Forme when casting ability"
   },
   "stat": {
     "ATK": "Attack",
@@ -2346,7 +2365,7 @@
   "synergy_description": {
     "NORMAL": "NORMAL Pokémons and their adjacent allies gain SHIELD when combat starts",
     "GRASS": "GRASS Pokémons heal and produce berries over time",
-    "FIRE": "FIRE Pokémons gain ATK after every hit and have a chance to BURN their enemies for 2 seconds",
+    "FIRE": "FIRE Pokémons gain ATK after every hit and have a chance to BURN their enemies",
     "WATER": "WATER Pokémons generate more PP and can be fished with a rod",
     "ELECTRIC": "ELECTRIC Pokémons basic attacks can trigger two additional attacks",
     "FIGHTING": "FIGHTING Pokémons block a flat amount of damage on every hit received. After 10 hits blocked, throw the target away, destroying its SHIELD",
@@ -2357,7 +2376,7 @@
     "POISON": "POISON Pokémons have a chance to POISONNED their target for 4 seconds with their basic attacks. Poison inflicts TRUE over time",
     "DRAGON": "DRAGON amplify synergies and gains more stats when fully evolved.",
     "FIELD": "When a FIELD Pokémon is KO, all the other FIELD Pokémons are healed and gain ATK_SPEED",
-    "MONSTER": "MONSTER Pokémons can FLINCH their opponents. Every time they get a KO, they gain stats, heal and grow in size",
+    "MONSTER": "MONSTER Pokémons can FLINCH their opponents for 3 seconds on attack. Every time they get a KO, they gain stats, heal and grow in size.",
     "HUMAN": "HUMAN Pokémons seek to stay on their feet. All your team heals for a percentage of the damage they deal with attacks and abilities",
     "AQUATIC": "AQUATIC Pokémons reduce the duration of status afflictions for all your team. After 8 seconds, a tidal wave cleans up negative status and field effects, heal your AQUATIC allies and knock back and damage enemies.",
     "BUG": "At the start of the combat, your strongest BUG Pokémons are cloned",
@@ -3209,7 +3228,8 @@
     "CROWDED": "Crowded Board",
     "KECLEONS_SHOP": "Kecleon's Shop",
     "FREE_MARKET": "Free Market",
-    "SHINY_HUNTER": "Shiny Hunter"
+    "SHINY_HUNTER": "Shiny Hunter",
+    "DESPERATE_MOVES": "Desperate Moves"
   },
   "scribble_description": {
     "EVERYONE_IS_HERE": "All the additional picks are available immediately",
@@ -3226,7 +3246,8 @@
     "CROWDED": "+3 units max on board",
     "KECLEONS_SHOP": "Item carousels are replaced by Kecleon's shop, that propose 6 items for 10 GOLD each",
     "FREE_MARKET": "Pokemons are bought and sold for 0 GOLD",
-    "SHINY_HUNTER": "All the Wild PvE encounters are shiny"
+    "SHINY_HUNTER": "All the Wild PvE encounters are shiny",
+    "DESPERATE_MOVES": "Players start with 150 HP. Rerolling shop costs HP instead of GOLD."
   },
   "loading_hints": {
     "tab_out": "Don't tab out! Loading is paused when this browser window is inactive.",
